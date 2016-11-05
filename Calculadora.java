@@ -5,7 +5,12 @@ public class calculadora {
 
         int op=0;
        double s,r,m,d;
-  
+       String [] dato= new String[30];
+       		String n1;
+       		String n2;
+       		String n3;
+       		String registrar;
+       		int cont=0;
         do{
             System.out.print("\n***CALCULADORA***\n" );
 	System.out.print("Elige una opcion\n" );
@@ -28,7 +33,12 @@ double a=0,b=0;
 	    b=entrada.nextDouble();
                     s=a+b;
                       System.out.println("La suma es:"+s +"\n");
-               
+                n1=String.valueOf(a);
+	                    n2=String.valueOf(b);
+	                    n3=String.valueOf(s);
+	                       registrar=a+"+"+b+"="+s;
+	                        dato[cont]=registrar;
+	                         cont++;
                     break;
                 case 2:
                     System.out.println("ingrese un numero");
