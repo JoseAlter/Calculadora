@@ -5,7 +5,7 @@ public class calculadora {
 
         int op=0;
        double s,r,m,d;
-  String [] dato= new String[30];
+       String [] dato= new String[30];
        		String n1;
        		String n2;
        		String n3;
@@ -33,7 +33,7 @@ double a=0,b=0;
 	    b=entrada.nextDouble();
                     s=a+b;
                       System.out.println("La suma es:"+s +"\n");
-                n1=String.valueOf(a);
+                      n1=String.valueOf(a);
 	                    n2=String.valueOf(b);
 	                    n3=String.valueOf(s);
 	                       registrar=a+"+"+b+"="+s;
@@ -47,7 +47,12 @@ double a=0,b=0;
 	    b=entrada.nextDouble();
                     r=a-b;
                     System.out.println("La resta es:"+r);
-               
+                    n1=String.valueOf(a);
+                    n2=String.valueOf(b);
+                    n3=String.valueOf(r);
+                       registrar=a+"-"+b+"="+r;
+                        dato[cont]=registrar;
+                         cont++;
                     break;
                 case 3:
                     System.out.println("ingrese un numero");
@@ -56,7 +61,7 @@ double a=0,b=0;
 	                  b=entrada.nextDouble();
                     m=a*b;
                       System.out.println("La multiplicacion es:"+m);
-                  n1=String.valueOf(a);
+                      n1=String.valueOf(a);
 	                    n2=String.valueOf(b);
 	                    n3=String.valueOf(m);
 	                       registrar=a+"*"+b+"="+m;
@@ -72,7 +77,7 @@ double a=0,b=0;
 	    if (b!=0){
                     d=a/b;
                       System.out.println("La division es:"+d);
-            n1=String.valueOf(a);
+                      n1=String.valueOf(a);
                       n2=String.valueOf(b);
                       n3=String.valueOf(d);
                          registrar=a+"+"+b+"="+d;
@@ -84,8 +89,36 @@ double a=0,b=0;
     }
 
                     break;
-          
+              case 5:
 
+                    System.out.println("BITACORA DE OPERACIONES");
+
+                    int z=0;
+                    while(z!=cont){
+                    System.out.println(z+"->"+dato[z]);
+                    z++;
+                        }
+
+                    break;
+                    case 6:
+      System.out.println("Desea borrar los datos"+
+                        "\n1.-si" +
+                        "\n2.-no");
+      int p=0;
+      p=entrada.nextInt();
+      switch  (p){
+      case 1:
+      int x=0;
+      while(x!=p){
+      dato[x]="";
+      }
+      System.out.println("Datos borrados");
+      	break;
+      case 2:
+      System.out.println  ("continúe ");
+      break;
+      }
+      	break;
             }
         }while(op!=7);
     }
